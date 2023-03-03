@@ -7,7 +7,7 @@ const sourcemaps = require('gulp-sourcemaps')
 
 gulp.task('serve', function () {
     browserSync.init({
-        proxy: 'one.wordpress.test'
+        proxy: 'localhost:8080'
     });
     gulp.watch('assets/css/**/*.css', gulp.series('css'))
     gulp.watch('(*.php|**/*.twig)').on('change', browserSync.reload);
